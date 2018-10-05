@@ -1,0 +1,48 @@
+global
+        log 127.0.0.1 local0
+        log 127.0.0.1 local1 notice
+        maxconn     20000 # Total Max Connections. This is dependent on ulimit
+        daemon
+        user haproxy
+        group asgapp 
+        nbproc      4 # Number of processing cores. Dual Dual-core Opteron is 4 cores for example.
+defaults
+        log global
+       ## balance roundrobin
+        option dontlognull
+        mode        http
+        clitimeout  100000
+        srvtimeout  100000
+        contimeout  5000
+        option      httpclose # Disable Keepalive
+        option httplog
+        option      forwardfor
+       # option      redispatch
+
+
+frontend http-in
+    option forwardfor except 127.0.0.1
+    bind *:80
+    acl rest_version1 path_beg /1/speechenabler/
+    acl rest_version2 path_beg /3/speechenabler/
+    #use_backend speechservicesV1 if rest_version1
+    use_backend speechservicesV3 if rest_version2
+    #default_backend speechservicesV3
+
+backend speechservicesV3
+    balance    <%= node["haproxy"]["balance_algorithm"] %> 
+   <% @pool_members.each do |member| -%>
+  server <%= member.name %> <%= member[:ipaddress] %>:<%= node["haproxy"]["member_port1"] %> weight 1 maxconn <%= node["haproxy"]["member_max_connections"] %> check
+  server <%= member.name %> <%= member[:ipaddress] %>:<%= node["haproxy"]["member_port2"] %> weight 1 maxconn <%= node["haproxy"]["member_max_connections"] %> check
+    <% end -%> 
+    stats enable
+
+listen admin
+    bind *:7080
+    stats enable
+ ##   stats hide-version
+ ##   stats scope   .
+    stats uri     /admin?stats
+    stats realm   Haproxy\ Statistics
+    stats auth    cspd:bsca123
+

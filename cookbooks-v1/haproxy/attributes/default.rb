@@ -1,0 +1,13 @@
+default['haproxy']['incoming_port'] = "80"
+default['haproxy']['member_port1'] = "8230"
+default['haproxy']['member_port2'] = "8380"
+default['haproxy']['enable_admin'] = true
+default['haproxy']['app_server_role1'] = "jboss-AS7-speechproperties-services"
+default['haproxy']['app_server_role2'] = "jboss-AS7-speechonly-services"
+default['haproxy']['balance_algorithm'] = "roundrobin"
+default['haproxy']['member_max_connections'] = "5000"
+default['haproxy']['x_forwarded_for'] = true 
+default['haproxy']['enable_ssl'] = false
+default['haproxy']['ssl_incoming_port'] = "443"
+default['haproxy']['ssl_member_port'] = "8443"
+default['haproxy']['src_dir']="/opt/haproxy"

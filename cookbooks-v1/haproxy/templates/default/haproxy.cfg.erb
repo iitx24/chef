@@ -1,0 +1,41 @@
+global
+        log 127.0.0.1 local0
+        log 127.0.0.1 local1 debug
+        maxconn     20000 # Total Max Connections. This is dependent on ulimit
+        daemon
+        user haproxy
+        group asgapp
+        nbproc      4 # Number of processing cores. Dual Dual-core Opteron is 4 cores for example.
+
+defaults
+        log global
+       ## balance roundrobin
+        option dontlognull
+        mode        http
+        clitimeout  900000
+        srvtimeout  900000
+        contimeout  5000
+        option      httpclose # Disable Keepalive
+        option httplog
+        option      forwardfor
+       # option      redispatch
+
+frontend http-in
+    option forwardfor except 127.0.0.1
+    bind *:8000
+    default_backend watsonspeech
+
+backend watsonspeech
+    balance    roundrobin
+        server  speech.prod.lb1.primary.san3.wmssp.sl.attcompute.com speech.prod.lb1.primary.san3.wmssp.sl.attcompute.com:80 weight 1 maxconn 5000 check
+        server  speech.prod.lb1.standby.san3.wmssp.sl.attcompute.com speech.prod.lb1.standby.san3.wmssp.sl.attcompute.com:80 weight 1 maxconn 5000 check backup
+    stats enable
+
+listen admin
+    bind *:7080
+    stats enable
+ ##   stats hide-version
+ ##   stats scope   .
+    stats uri     /admin?stats
+    stats realm   Haproxy\ Statistics
+    stats auth    cspd:bsca123
