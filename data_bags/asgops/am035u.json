@@ -1,0 +1,16 @@
+{
+  "id": "amtestu",
+  "home": "/home/amtestu",
+  "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAy3diggzA5iQUAgR6CamJdV5R1Lk9lClpm33chMPALuC6MLKaS7aGXbSmWjCAZ4kmYNjdFgXCQV/tTsk8mnPqoO7/yT1mCE1p7DHUZOBR+MouQAi4QDcfNOrRFvUVtTkt92yATLR966xQ+x4QKlUCBNTlMIBv8a2F+GXV+sO2Or5zJN66Ygn7GCWGodL+1jJIBaejX6xD8Pr9+yqY8vkUhkG4HTRLLOo0CAiojLkJoCvP7hj8HbdmLMOfXBiZFtNqMqADAdElqVeMRYDhAW65r3+ffeTrebmnxE9U0s6WdrIU6/TQvIxyrjeWcBSxqG2cpocBKviufXyicp+X8o3mzR== amtestu@server-3267",
+  "gid": "asgops",
+  "nagios": {
+    "pager": "8005551212@txt.att.net",
+    "email": ""
+  },
+  "comment": "////S",
+  "uid": 2202,
+  "shell": "/bin/bash",
+  "groups": [
+    "asgops"
+  ]
+}

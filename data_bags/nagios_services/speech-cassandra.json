@@ -1,0 +1,5 @@
+{
+"id": "cassandra",
+"hostgroup_name": "cassandra",
+"command_line": "$USER1$/check_cassandra -H $HOSTADDRESS$ -P 7199 -w 4 -c 3"
+}

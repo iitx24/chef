@@ -1,0 +1,5 @@
+{
+"id": "443-speech-nginx-north",
+"hostgroup_name": "speech-nginx-north",
+"command_line": "$USER1$/check_tcp -H $HOSTADDRESS$ -p 443"
+}

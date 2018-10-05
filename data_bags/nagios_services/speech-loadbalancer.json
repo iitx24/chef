@@ -1,0 +1,6 @@
+{
+"id": "speech-loadbalancer",
+"service_description": "Port 8080",
+"hostgroup_name": "speech-loadbalancer",
+"command_line": "$USER1$/check_tcp -H $HOSTADDRESS$ -p 8080"
+}

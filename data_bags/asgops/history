@@ -1,0 +1,500 @@
+  245  pwd
+  246  ls -ltr
+  247  pwd
+  248  ls -ltr
+  249  knife node list
+  250  ls -ltr
+  251  pwd
+  252  rm -rf chef-repo-sql1-prod/
+  253  pwd
+  254  cd cookbooks
+  255  ls
+  256  rm -rf *
+  257  ls
+  258  pwd
+  259  scp -r /root/sql/chef-repo-sql1-prod/cookbooks/* .
+  260  ls -ltr
+  261  rm -fr *.gz
+  262  ls -ltr
+  263  pwd
+  264  clear
+  265  pwd
+  266  ls -ltr
+  267  pwd
+  268  ls -ltr
+  269  knife node list
+  270  for i in `knife node list`;do knife node delete $i -y ; knife client delete $i -y;done
+  271  knife node list
+  272  knife node lsit
+  273  knife node list
+  274  pwd
+  275  pwd
+  276  ls -ltr
+  277  pwd
+  278  ls -ltr
+  279  knife role list
+  280  knife environment list 
+  281  pwd
+  282  pwd
+  283  ls
+  284  pwd
+  285  cd users
+  286  ls
+  287  cd recipes/
+  288  ls
+  289  ls -ltr
+  290  vi ganglia-u.rb 
+  291  vi ganglia.rb 
+  292  cat logstash.rb 
+  293  pwd
+  294  ls -ltr
+  295  more server.rb 
+  296  vi ../../nagios/recipes/client.rb 
+  297  pwd
+  298  cd ..
+  299  cd ..
+  300  ls
+  301  cd ganglia/
+  302  ls
+  303  cd templates/
+  304  ls
+  305  ls -ltr
+  306  cd default/
+  307  ls
+  308  ls -ltr
+  309  cat gmond.conf.erb 
+  310  cd ..
+  311  ls
+  312  pwd
+  313  ls -ltr
+  314  pwd
+  315  ls -ltr
+  316  pwd
+  317  pwd
+  318  ls -ltr
+  319  cat gmond.conf.erb 
+  320  pwd
+  321  ls
+  322  pwd
+  323  cd default/
+  324  ls
+  325  more gmond.conf.erb 
+  326  pwd
+  327  pwd
+  328  ls
+  329  pwd
+  330  cd ..
+  331  cd ..
+  332  pwd
+  333  ls -ltr
+  334  knife cookbook delete ganglia
+  335  knife upload ganglia
+  336  knife cookbook upload ganglia
+  337  pwd
+  338  ls
+  339  more README.rdoc 
+  340  pwd
+  341  mkdir ~anil/project/sql1/common-dev
+  342  mkdir ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem
+  343  rm -rf  ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem
+  344  vi   ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem
+  345  knife bootstrap  10.50.1.8 -x root -i ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem  -N speech-ganglia01-sql1-dev -E cspd-common-sql1-dev  -r role[ganglia]
+  346  knife cookbook site download runit
+  347  knife cookbook list |grep runit
+  348  knife cookbook delete runit
+  349  tar zxvf runit-1.5.10.tar.gz 
+  350  knife cookbook upload runit
+  351  knife bootstrap  10.50.1.8 -x root -i ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem  -N speech-ganglia01-sql1-dev -E cspd-common-sql1-dev  -r role[ganglia]
+  352  pwd
+  353  cd recipes/
+  354  ls
+  355  vi gmetad.rb 
+  356  pwd
+  357  ls
+  358  cd ..
+  359  ls
+  360  cd templates/
+  361  ls
+  362  cd default/
+  363  ls
+  364  more gmetad-startscript.erb 
+  365  pwd
+  366  vi  gmetad-startscript.erb 
+  367  pwd
+  368  cd ..
+  369  cd ..
+  370  ls
+  371  cd templates/
+  372  cd ..
+  373  cd recipes/
+  374  ls
+  375  vi gmetad.rb 
+  376  pwd
+  377  cd ..
+  378  more README.rdoc 
+  379  pwd
+  380  pwd
+  381  pwd
+  382  ls -ltr
+  383  pwd
+  384  rm -rf runit
+  385  rm -rf runit-1.5.10.tar.gz 
+  386  ls
+  387  pwd
+  388  ccd templates/
+  389  ls
+  390  cd templates/
+  391  ls
+  392  cd default/
+  393  ls
+  394  vi gmond_unicast.conf.erb 
+  395  pwd
+  396  vi ../../recipes/default.rb 
+  397  pwd
+  398  cd ..
+  399  pwd
+  400  cd ..
+  401  cd attributes/
+  402  ls
+  403  vi ganglia.rb 
+  404  knife node list
+  405  knide node show kspeech-ganglia01-sql1-dev
+  406  knide node show speech-ganglia01-sql1-dev
+  407  knife node show speech-ganglia01-sql1-dev
+  408  knife node show kspeech-ganglia01-sql1-dev
+  409  knife node show speech-ganglia01-sql1-dev
+  410  knife node run_list add speech-ganglia01-sql1-dev role[ganglia]
+  411  knife node show speech-ganglia01-sql1-dev
+  412  pwd
+  413  vi ganglia.rb 
+  414  pwd
+  415  vi ../recipes/default.rb 
+  416  vi ganglia.rb 
+  417  vi ../templates/default/gmond_unicast.conf.erb 
+  418  knife cookbook upload ganglia
+  419  vi ../templates/default/gmond_unicast.conf.erb 
+  420  vi ganglia.rb 
+  421  vi ../templates/default/gmond_unicast.conf.erb 
+  422  vi ganglia.rb 
+  423  knife cookbook upload ganglia
+  424  vi ganglia.rb 
+  425  knife cookbook upload ganglia
+  426  pwd
+  427  vi ../recipes/gmond_collector.rb 
+  428  grep ipaddress *
+  429  cd ..
+  430  lw
+  431  ls
+  432  more README.rdoc 
+  433  vi ../recipes/gmond_collector.rb 
+  434  pwd
+  435  cd templates/
+  436  ls
+  437  cd default/
+  438  ls
+  439  ls -ltr
+  440  vi gmond_unicast.conf.erb 
+  441  cd ..
+  442  pwd
+  443  cd ..
+  444  ls
+  445  cd attributes/
+  446  ls
+  447  vi ganglia.rb 
+  448  knife cookbook upload ganglia
+  449  pwd
+  450  cd ..
+  451  grep -r "ipaddress" *
+  452  knife node list
+  453  knife node show speech-ganglia01-sql1-dev
+  454  knife node delete  speech-ganglia01-sql1-dev
+  455  knife client delete  speech-ganglia01-sql1-dev
+  456  knife bootstrap  10.50.1.8 -x root -i ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem  -N speech-ganglia01-sql1-dev -E cspd-common-sql1-dev  -r role[base]
+  457  knife bootstrap  10.50.1.8 -x root -i ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem  -N speech-ganglia01-sql1-dev -E cspd-common-sql1-dev  -r role[base]
+  458  knife node show speech-ganglia01-sql1-dev
+  459  knife node run_list add speech-ganglia01-sql1-dev role[ganglia]
+  460  cd /root
+  461  cd sql/
+  462  ls
+  463  cd chef-repo-sql1-prod/
+  464  ls
+  465  cat agent.conf 
+  466  :/speechEngineInlinehints
+  467  vi  agent.conf 
+  468  pwd
+  469  ls -ltr
+  470  sudo su -
+  471  v
+  472  v
+  473  v
+  474  v
+  475  v
+  476  v
+  477  cd Downloads/
+  478  ls -ltr
+  479  zip repository.xbmc-adult.zip repository.xbmc-adult
+  480  ls -ltr
+  481  scp repository.xbmc-adult.zip root@192.168.1.101:/private/var/mobile/Applications
+  482  rm -rf repository.xbmc-adult.*
+  483  ls -ltr
+  484  scp repository.xbmc-adult.zip root@192.168.1.101:/private/var/mobile/Applications
+  485  scp repository.xbmc-adult-1.0.1.zip root@192.168.1.101:/private/var/mobile/Applications
+  486  v
+  487  v
+  488  v
+  489  v
+  490  v
+  491  v
+  492  v
+  493  pwd
+  494  ls
+  495  ls -ltr
+  496  pwd
+  497  ls -ltr
+  498  pwd
+  499  ls -ltr
+  500  v
+  501  sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+  502  cd   /Library/Java/JavaVirtualMachines 
+  503  ls
+  504  pwd
+  505  cd ..
+  506  ls
+  507  java
+  508  which java
+  509  java --version
+  510  java -version
+  511  ls -l /usr/bin/java
+  512  cd /System/Library/Frameworks/
+  513  ls
+  514  cd JavaFrameEmbedding.framework/
+  515  s
+  516  ls
+  517  cd ..
+  518  mv JavaFrameEmbedding.framework/ JavaFrameEmbedding.framework-org
+  519  sudo mv JavaFrameEmbedding.framework/ JavaFrameEmbedding.framework-org
+  520  java
+  521  which java
+  522  ls -ltr /usr/bin/java
+  523  owd
+  524  pwd
+  525  ls
+  526  pwd
+  527  l
+  528  nova 
+  529  nova 
+  530  pip
+  531  pip install
+  532  easy_install pip
+  533  sudo easy_install pip
+  534  brew install python
+  535  sudo brew install python
+  536  brew install python
+  537  brew install python
+  538  brew link gdbm
+  539  sudo brew link gdbm
+  540  brew link gdbm
+  541  ls -l /usr/local/
+  542  ls -l /usr/local/lib/
+  543  chown anil  /usr/local/lib/
+  544  sudo chown anil  /usr/local/lib/
+  545  brew link gdbm
+  546  sudo chown anil:admin  /usr/local/lib/
+  547  brew link gdbm
+  548  sudo chown -R anil:admin  /usr/local/lib/
+  549  brew link gdbm
+  550  sudo chown 775  /usr/local/lib/
+  551  brew link gdbm
+  552  cd /usr/local/
+  553  ls
+  554  mkdir t
+  555  rm -rf t
+  556  pwd
+  557  cd lib/
+  558  ls
+  559  mkdir t
+  560  ls -ltr
+  561  cd ..
+  562  l s-ltr
+  563  ls -ltr
+  564  chown anil lib/
+  565  sudo chown anil lib/
+  566  cd lib/
+  567  mkdir r
+  568  rm -rf r
+  569  brew link gdbm
+  570  pwd
+  571  cd ..
+  572  ls
+  573  ls -ltr
+  574  cd Cellar/
+  575  ls
+  576  ls -ltr
+  577  cd gdbm/
+  578  ls
+  579  ls -ltr
+  580  cd 1.10/
+  581  ls
+  582  ls -ltr
+  583  cd include/
+  584  ls
+  585  ls -ltr
+  586  touch r
+  587  rm r
+  588  ls -ltr
+  589  brew link gdbm
+  590  brew install python
+  591  brew link gdbm
+  592  brew link gdbm
+  593  pwd
+  594  ls
+  595  ls -ltr
+  596  mv gdbm.h gdbm.h-org
+  597  brew link gdbm
+  598  mv gdbm.h-org gdbm.h
+  599  pwd
+  600  ls -ltr
+  601  cd ..
+  602  ls
+  603  pwd
+  604  ls -ltr
+  605  pwd
+  606  ls -ltr
+  607  ls
+  608  pwd
+  609  ls -ltr
+  610  brew link gdbm
+  611  pwd
+  612  nova list
+  613  pwd
+  614  nova list
+  615  pwd
+  616  ls
+  617  pwd
+  618  ls -ltr
+  619  pwd
+  620  ls -ltr
+  621  pw
+  622  cd ..
+  623  ls
+  624  pwd
+  625  cd ..
+  626  cd ..
+  627  ls
+  628  pwd
+  629  ls -ltr
+  630  pwd
+  631  ls -ltr
+  632  pwd
+  633  ls -ltr
+  634  df -h
+  635  clear
+  636  wd
+  637  pwd
+  638  ls -ltr
+  639  pwd
+  640  ls -ltr
+  641  pwd
+  642  ls -ltr
+  643  nova list
+  644  pwd
+  645  ls -ltr
+  646  ssh 
+  647  cd /root
+  648  ls
+  649  cd sql/
+  650  ls
+  651  cd chef-repo-sql1-dev/
+  652  ls
+  653  cd cookbooks
+  654  ls
+  655  cd users
+  656  ls
+  657  cd files/
+  658  ls
+  659  cd  default/
+  660  ls
+  661  ls -ltr
+  662  more add_user_apps.sh
+  663  tar xvf add_user_apps.sh 
+  664  ls -ltr
+  665  tar zxvf add_users.tar.gz 
+  666  more add_user_apps.sh 
+  667  pwd
+  668  cp  /root/ewr/chef-repo-ewr1-dev/cookbooks/users/files/default/add_users.tar.gz .
+  669  tar zxvf add_users.tar.gz 
+  670  ls -ltr
+  671  cat add_user_apps.sh 
+  672  pwd
+  673  knife cookbook upload users
+  674  pwd
+  675  sudo su - am035u
+  676  pwd
+  677  ls
+  678  ssh -i ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem root@10.60.1.7
+  679  chmod 0600 ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem
+  680  ssh -i ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem root@10.60.1.7
+  681  ssh -i ~anil/project/sql1/common-dev/speech-sql1-common-dev.pem root@10.60.1.7
+  682  mkdir  ~anil/project/sql1/sit
+  683  vi   ~anil/project/sql1/sit/speech-sql1-sit.pem
+  684  chmod 0600 ~anil/project/sql1/sit/speech-sql1-sit.pem
+  685  ssh -i ~anil/project/sql1/sit/speech-sql1-sit.pem root@10.60.1.7
+  686  pwd
+  687  cd ..
+  688  ls
+  689  cd ..
+  690  ls
+  691  pwd
+  692  cd ..
+  693  cd users
+  694  cd ..
+  695  ls
+  696  cpwd
+  697  pwd
+  698  cd ..
+  699  cd data_bags
+  700  ls
+  701  cd asgapps
+  702  ls
+  703  ls -ltr
+  704  tm akadimetla.json 
+  705  rm akadimetla.json 
+  706  ls -ltr |grep 51
+  707  for i in `ls -ltr |grep 51 | awk '{print $9}'`; do rm $i;done
+  708  ls -ltr
+  709  cd ..
+  710  ls
+  711  cd asgops/
+  712  ls
+  713  ls -ltr
+  714  for i in `ls -ltr |grep 51 | awk '{print $9}'`; do rm $i;done
+  715  ls -ltr
+  716  for i in `ls -ltr |grep 50 | awk '{print $9}'`; do rm $i;done
+  717  ls -ltr
+  718  rm patrol.json ls0466.json akadimetla.json cspd-admin.json cspd-support.json mj0225.json ph802u.json rj767c.json sh6459.json 
+  719  ls -ltr
+  720  rm rl5495.json 
+  721  ls
+  722  ls -ltr
+  723  cd ..
+  724  ls
+  725  pwd
+  726  pwd
+  727  pwd
+  728  ls
+  729  pwd
+  730  knife 
+  731  pwd
+  732  ls -ltr
+  733  pwd
+  734  ls
+  735  ls -ltr
+  736  knife data bag create asgops
+  737  knife data bag create asgapps
+  738  cd asgapps
+  739  for i in `ls -ltr  | awk '{print $9}'`; do knife data bag from asgapps  $i;done
+  740  for i in `ls -ltr  | awk '{print $9}'`; do knife data bag from file asgapps  $i;done
+  741  cd ..
+  742  cd asgops/
+  743  for i in `ls -ltr  | awk '{print $9}'`; do knife data bag from file asgops  $i;done
+  744  history >> history

@@ -1,0 +1,5 @@
+{
+"id": "8880-tts-watson",
+"hostgroup_name": "wmssp-tts",
+"command_line": "$USER1$/check_tcp -H $HOSTADDRESS$ -p 8880"
+}

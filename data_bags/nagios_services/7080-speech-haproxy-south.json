@@ -1,0 +1,5 @@
+{
+"id": "7080-speech-haproxy-south",
+"hostgroup_name": "speech-haproxy-south",
+"command_line": "$USER1$/check_tcp -H $HOSTADDRESS$ -p 7080"
+}
